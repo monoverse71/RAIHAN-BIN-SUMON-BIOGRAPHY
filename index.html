@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+<title>Raihan Bin Sumon — Chairman, Apon Niketon Holdings</title>
+<meta name="description" content="Executive profile of Raihan Bin Sumon — Chairman, Apon Niketon Holdings. Shaping Modern Infrastructure & Visionary Ventures." />
+
+<!-- Fonts: Cormorant Garamond (display) + Manrope (body/UI) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Tailwind (CDN, standalone build) -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- Lucide Icons -->
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<style>
+  :root{
+    --navy-deep:#0B0F19;
+    --navy-slate:#111827;
+    --gold:#D4AF37;
+    --gold-bright:#F59E0B;
+    --ink:#E7E9EE;
+    --muted:#93A0B4;
+    --hair:rgba(212,175,55,0.16);
+    --glass:rgba(255,255,255,0.035);
+    --glass-brd:rgba(255,255,255,0.08);
+  }
+
+  html{scroll-behavior:smooth;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 15% -10%, rgba(212,175,55,0.10), transparent 60%),
+      radial-gradient(900px 500px at 100% 0%, rgba(245,158,11,0.06), transparent 55%),
+      linear-gradient(180deg, var(--navy-deep), var(--navy-slate) 40%, var(--navy-deep));
+    background-attachment:fixed;
+    color:var(--ink);
+    font-family:'Manrope', ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .font-display{ font-family:'Cormorant Garamond', 'Times New Roman', serif; }
+
+  /* faint monogram watermark used as the page's signature motif */
+  .monogram-wm{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    color:transparent;
+    -webkit-text-stroke:1px rgba(212,175,55,0.14);
+    letter-spacing:0.02em;
+    pointer-events:none;
+    user-select:none;
+  }
+
+  .glass{
+    background:var(--glass);
+    border:1px solid var(--glass-brd);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+  }
+  .glass-strong{
+    background:linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    border:1px solid var(--glass-brd);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+  }
+
+  .gold-text{
+    background:linear-gradient(100deg, #F3D98A 0%, var(--gold) 45%, var(--gold-bright) 100%);
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+  .gold-line{ background:linear-gradient(90deg, transparent, var(--gold) 50%, transparent); height:1px; }
+
+  .avatar-ring{
+    background:conic-gradient(from 0deg, #F3D98A, var(--gold-bright), var(--gold), #F3D98A);
+    animation:spin 7s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+
+  .rise{ opacity:0; transform:translateY(14px); animation:rise .7s cubic-bezier(.16,.84,.44,1) forwards; }
+  @keyframes rise{ to{ opacity:1; transform:translateY(0); } }
+
+  .card-hover{ transition:transform .35s cubic-bezier(.16,.84,.44,1), border-color .35s ease, box-shadow .35s ease; }
+  .card-hover:hover{
+    transform:translateY(-4px);
+    border-color:rgba(212,175,55,0.45);
+    box-shadow:0 20px 45px -20px rgba(212,175,55,0.25), 0 0 0 1px rgba(212,175,55,0.06) inset;
+  }
+  .card-hover:active{ transform:translateY(-1px) scale(.995); }
+
+  .tab-btn{ transition:all .3s ease; }
+  .tab-btn[data-active="true"]{
+    background:linear-gradient(135deg, rgba(212,175,55,0.16), rgba(245,158,11,0.06));
+    border-color:rgba(212,175,55,0.55);
+    color:#F3D98A;
+  }
+
+  .cta-btn{ transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+  .cta-btn:active{ transform:scale(.96); }
+
+  .shimmer{ position:relative; overflow:hidden; }
+  .shimmer::after{
+    content:"";
+    position:absolute; inset:0;
+    background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.10) 45%, transparent 60%);
+    transform:translateX(-120%);
+    animation:shimmer 4.5s ease-in-out infinite;
+  }
+  @keyframes shimmer{ 0%,100%{ transform:translateX(-120%);} 50%{ transform:translateX(120%);} }
+
+  .modal-backdrop{ backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); }
+  .modal-panel{ transition:transform .3s cubic-bezier(.16,.84,.44,1), opacity .3s ease; }
+
+  ::-webkit-scrollbar{ width:6px; }
+  ::-webkit-scrollbar-thumb{ background:rgba(212,175,55,0.35); border-radius:999px; }
+
+  :focus-visible{ outline:2px solid var(--gold); outline-offset:2px; border-radius:6px; }
+
+  input:focus, textarea:focus{ border-color:rgba(212,175,55,0.6) !important; }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
+  }
+
+  .eyebrow{ letter-spacing:0.22em; font-size:0.68rem; }
+
+  .safe-bottom{ padding-bottom:env(safe-area-inset-bottom); }
+</style>
+</head>
+
+<body class="min-h-screen antialiased">
+
+<!-- ambient monogram watermark, fixed, behind content -->
+<div class="fixed inset-0 -z-10 flex items-center justify-center overflow-hidden">
+  <span class="monogram-wm text-[42vw] leading-none select-none">RBS</span>
+</div>
+
+<div class="max-w-md mx-auto px-5 pt-8 pb-32 relative">
+
+  <!-- ============ HERO ============ -->
+  <header class="rise" style="animation-delay:.05s">
+    <div class="flex flex-col items-center text-center">
+      <div class="relative w-28 h-28">
+        <div class="absolute inset-0 rounded-full avatar-ring p-[2.5px]">
+          <div class="w-full h-full rounded-full bg-[var(--navy-deep)]"></div>
+        </div>
+        <div class="absolute inset-[4px] rounded-full overflow-hidden border border-white/10 shadow-[0_0_30px_-4px_rgba(212,175,55,0.55)]">
+          <img
+            src="profile.jpg"
+            alt="Raihan Bin Sumon"
+            class="w-full h-full object-cover rounded-full"
+          />
+        </div>
+        <div class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full glass-strong flex items-center justify-center border-[var(--gold)]/40">
+          <i data-lucide="badge-check" class="w-4 h-4" style="color:var(--gold)"></i>
+        </div>
+      </div>
+
+      <p class="eyebrow uppercase text-[var(--gold)]/80 mt-5 font-semibold">Executive Profile</p>
+      <h1 class="font-display text-4xl mt-1 tracking-wide gold-text font-semibold">Raihan Bin Sumon</h1>
+      <p class="text-sm text-[var(--muted)] mt-2 font-medium">Chairman, Apon Niketon Holdings</p>
+
+      <div class="gold-line w-24 my-4"></div>
+
+      <p class="text-xs text-[var(--muted)] tracking-wide px-4 leading-relaxed">
+        Shaping Modern Infrastructure &amp; Visionary Ventures
+      </p>
+    </div>
+
+    <!-- Quick action grid -->
+    <div class="grid grid-cols-4 gap-2.5 mt-7">
+      <button id="btn-vcard" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/50">
+        <i data-lucide="user-round-plus" class="w-5 h-5" style="color:var(--gold)"></i>
+        <span class="text-[10px] font-semibold text-[var(--ink)]/85">Save</span>
+      </button>
+      <a href="https://wa.me/8801719039176" target="_blank" rel="noopener" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/50">
+        <i data-lucide="message-circle" class="w-5 h-5" style="color:var(--gold)"></i>
+        <span class="text-[10px] font-semibold text-[var(--ink)]/85">WhatsApp</span>
+      </a>
+      <a href="tel:01719039176" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/50">
+        <i data-lucide="phone" class="w-5 h-5" style="color:var(--gold)"></i>
+        <span class="text-[10px] font-semibold text-[var(--ink)]/85">Call</span>
+      </a>
+      <a href="mailto:aponniketonholdings@gmail.com" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/50">
+        <i data-lucide="mail" class="w-5 h-5" style="color:var(--gold)"></i>
+        <span class="text-[10px] font-semibold text-[var(--ink)]/85">Email</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- ============ VENTURE MATRIX ============ -->
+  <section class="mt-11 rise" style="animation-delay:.12s">
+    <div class="flex items-baseline justify-between mb-4">
+      <h2 class="font-display text-2xl font-semibold text-[var(--ink)]">Leadership &amp; Ventures</h2>
+      <span class="eyebrow text-[var(--muted)]">04</span>
+    </div>
+
+    <div id="venture-tabs" class="flex gap-2 overflow-x-auto pb-1 mb-4 -mx-1 px-1" style="scrollbar-width:none;">
+      <!-- tab buttons injected by JS -->
+    </div>
+
+    <div id="venture-panel" class="glass-strong rounded-3xl p-5 min-h-[168px]"></div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="mt-11 rise" style="animation-delay:.18s">
+    <div class="flex items-baseline justify-between mb-4">
+      <h2 class="font-display text-2xl font-semibold text-[var(--ink)]">Flagship Projects</h2>
+      <span class="eyebrow text-[var(--muted)]">06</span>
+    </div>
+    <div id="projects-grid" class="grid grid-cols-2 gap-3"></div>
+  </section>
+
+  <!-- ============ MEETING CTA ============ -->
+  <section class="mt-11 rise" style="animation-delay:.24s">
+    <button id="open-meeting" class="shimmer w-full glass-strong rounded-3xl p-5 flex items-center justify-between card-hover text-left" style="border-color:rgba(212,175,55,0.35)">
+      <div>
+        <p class="eyebrow uppercase text-[var(--gold)]/80 font-semibold mb-1">Private Consultation</p>
+        <p class="font-display text-xl font-semibold">Request a Meeting</p>
+        <p class="text-xs text-[var(--muted)] mt-1">Direct inquiry, routed to WhatsApp or email</p>
+      </div>
+      <div class="w-11 h-11 rounded-full flex items-center justify-center shrink-0 ml-3" style="background:linear-gradient(135deg,#F3D98A,#D4AF37)">
+        <i data-lucide="arrow-up-right" class="w-5 h-5 text-[#0B0F19]"></i>
+      </div>
+    </button>
+  </section>
+
+  <!-- ============ OFFICE LOCATION ============ -->
+  <section class="mt-6 rise" style="animation-delay:.28s">
+    <div class="glass-strong rounded-3xl p-5">
+      <div class="flex items-start gap-3.5">
+        <div class="w-11 h-11 rounded-2xl glass flex items-center justify-center shrink-0" style="border-color:rgba(212,175,55,0.3)">
+          <i data-lucide="map-pin" class="w-5 h-5" style="color:var(--gold)"></i>
+        </div>
+        <div class="flex-1">
+          <p class="eyebrow uppercase text-[var(--gold)]/80 font-semibold mb-1">Head Office</p>
+          <p class="text-sm text-[var(--ink)]/90 leading-relaxed">Kaji Tower, 37 Station Road,<br/>Mymensingh, Bangladesh</p>
+        </div>
+      </div>
+      <a href="https://maps.app.goo.gl/gRmkUeRF8nowiUBx8" target="_blank" rel="noopener"
+         class="cta-btn mt-4 w-full flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold"
+         style="background:linear-gradient(135deg,#F3D98A,#D4AF37); color:#0B0F19;">
+        <i data-lucide="navigation" class="w-4 h-4"></i>
+        Get Directions
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ SOCIAL ============ -->
+  <section class="mt-6 rise" style="animation-delay:.32s">
+    <p class="eyebrow uppercase text-[var(--muted)] font-semibold mb-3 text-center">Official Channels</p>
+    <div class="grid grid-cols-2 gap-3">
+      <a href="https://www.facebook.com/raihan.bin.sumon" target="_blank" rel="noopener" class="cta-btn glass rounded-2xl py-3.5 flex items-center justify-center gap-2 border-white/10 hover:border-[var(--gold)]/50">
+        <i data-lucide="facebook" class="w-4 h-4" style="color:var(--gold)"></i>
+        <span class="text-xs font-semibold">Personal</span>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61592000484182" target="_blank" rel="noopener" class="cta-btn glass rounded-2xl py-3.5 flex items-center justify-center gap-2 border-white/10 hover:border-[var(--gold)]/50">
+        <i data-lucide="facebook" class="w-4 h-4" style="color:var(--gold)"></i>
+        <span class="text-xs font-semibold">Company Page</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="mt-14 text-center rise" style="animation-delay:.36s">
+    <div class="gold-line w-16 mx-auto mb-4"></div>
+    <p class="font-display text-lg gold-text font-semibold">Apon Niketon Holdings</p>
+    <p class="text-[11px] text-[var(--muted)] mt-1 tracking-wide">Shaping Modern Infrastructure &amp; Visionary Ventures</p>
+  </footer>
+</div>
+
+<!-- ============ STICKY BOTTOM BAR ============ -->
+<div class="fixed bottom-0 inset-x-0 z-30 safe-bottom">
+  <div class="max-w-md mx-auto px-5 pb-4">
+    <div class="glass-strong rounded-2xl p-2 flex items-center gap-2 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)]">
+      <button id="btn-vcard-2" class="cta-btn flex-1 flex items-center justify-center gap-1.5 rounded-xl py-2.5 text-xs font-bold" style="background:linear-gradient(135deg,#F3D98A,#D4AF37); color:#0B0F19;">
+        <i data-lucide="download" class="w-3.5 h-3.5"></i> Save Contact
+      </button>
+      <a href="https://wa.me/8801719039176" target="_blank" rel="noopener" class="cta-btn w-11 h-11 shrink-0 rounded-xl flex items-center justify-center glass border-white/10">
+        <i data-lucide="message-circle" class="w-4.5 h-4.5" style="color:var(--gold)"></i>
+      </a>
+      <a href="tel:01719039176" class="cta-btn w-11 h-11 shrink-0 rounded-xl flex items-center justify-center glass border-white/10">
+        <i data-lucide="phone" class="w-4.5 h-4.5" style="color:var(--gold)"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ============ MEETING MODAL ============ -->
+<div id="meeting-modal" class="fixed inset-0 z-50 hidden">
+  <div id="meeting-backdrop" class="absolute inset-0 bg-black/60 modal-backdrop"></div>
+  <div class="absolute inset-x-0 bottom-0 sm:inset-0 sm:flex sm:items-center sm:justify-center px-4 pb-4 sm:pb-4">
+    <div id="meeting-panel" class="modal-panel glass-strong w-full max-w-md mx-auto rounded-3xl p-6 translate-y-6 opacity-0" style="border-color:rgba(212,175,55,0.3)">
+      <div class="flex items-center justify-between mb-1">
+        <p class="font-display text-2xl font-semibold gold-text">Request a Meeting</p>
+        <button id="close-meeting" class="w-8 h-8 rounded-full glass flex items-center justify-center border-white/10">
+          <i data-lucide="x" class="w-4 h-4 text-[var(--muted)]"></i>
+        </button>
+      </div>
+      <p class="text-xs text-[var(--muted)] mb-5">Share a few details — we'll route it straight to WhatsApp or email.</p>
+
+      <form id="meeting-form" class="space-y-3.5">
+        <div>
+          <label class="text-[11px] font-semibold text-[var(--muted)] uppercase tracking-wide">Full Name</label>
+          <input required id="m-name" type="text" placeholder="Your name"
+            class="w-full mt-1.5 bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 outline-none transition-colors"/>
+        </div>
+        <div>
+          <label class="text-[11px] font-semibold text-[var(--muted)] uppercase tracking-wide">Phone / WhatsApp</label>
+          <input required id="m-phone" type="tel" placeholder="+880"
+            class="w-full mt-1.5 bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 outline-none transition-colors"/>
+        </div>
+        <div>
+          <label class="text-[11px] font-semibold text-[var(--muted)] uppercase tracking-wide">Purpose of Meeting</label>
+          <textarea id="m-message" rows="3" placeholder="Briefly describe your inquiry..."
+            class="w-full mt-1.5 bg-white/5 border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-[var(--ink)] placeholder:text-[var(--muted)]/60 outline-none resize-none transition-colors"></textarea>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2.5 pt-1">
+          <button type="button" id="send-whatsapp" class="cta-btn flex items-center justify-center gap-1.5 rounded-xl py-3 text-xs font-bold" style="background:linear-gradient(135deg,#F3D98A,#D4AF37); color:#0B0F19;">
+            <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
+          </button>
+          <button type="button" id="send-email" class="cta-btn flex items-center justify-center gap-1.5 rounded-xl py-3 text-xs font-bold glass border-white/15">
+            <i data-lucide="mail" class="w-4 h-4" style="color:var(--gold)"></i> Email
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ---------------- DATA ---------------- */
+const ventures = [
+  {
+    org: "Apon Niketon Holdings",
+    role: "Chairman",
+    icon: "building-2",
+    desc: "Core real estate & construction ventures — the flagship holding company behind Apon Niketon's residential and commercial developments."
+  },
+  {
+    org: "Apon Niketon Association",
+    role: "Vice Chairman",
+    icon: "users",
+    desc: "Organizational leadership, policy direction, and community welfare initiatives across the Apon Niketon network."
+  },
+  {
+    org: "FOPS TAILORS & FABRICS",
+    role: "Founder & Proprietor",
+    icon: "scissors",
+    desc: "Bespoke tailoring & premium lifestyle craftsmanship — precision garments made to an executive standard."
+  },
+  {
+    org: "Serum Hospital",
+    role: "Shareholder",
+    icon: "heart-pulse",
+    desc: "Healthcare expansion & modern clinical wellness — investing in accessible, high-quality medical care."
+  }
+];
+
+const projects = [
+  { name: "Brahmaputro Arch", sub: "Lake View Project", icon: "waves" },
+  { name: "Maskanda", sub: "Garden City", icon: "trees" },
+  { name: "Goyailkandi", sub: "Garden City", icon: "trees" },
+  { name: "Almapara", sub: "Garden City", icon: "trees" },
+  { name: "Bonoful Tower", sub: "Residential", icon: "building" },
+  { name: "Rafiq Uddin Bhuiyan", sub: "Tower", icon: "building" }
+];
+
+document.addEventListener("DOMContentLoaded", function () {
+  lucide.createIcons();
+
+/* ---------------- VENTURE TABS ---------------- */
+const tabsEl = document.getElementById("venture-tabs");
+const panelEl = document.getElementById("venture-panel");
+
+function renderPanel(i){
+  const v = ventures[i];
+  panelEl.innerHTML = `
+    <div class="flex items-start gap-4">
+      <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg, rgba(212,175,55,0.18), rgba(245,158,11,0.06)); border:1px solid rgba(212,175,55,0.3)">
+        <i data-lucide="${v.icon}" class="w-5.5 h-5.5" style="color:var(--gold)"></i>
+      </div>
+      <div>
+        <p class="font-display text-xl font-semibold leading-tight">${v.org}</p>
+        <p class="text-[11px] uppercase tracking-wide font-bold mt-1" style="color:var(--gold)">${v.role}</p>
+      </div>
+    </div>
+    <p class="text-sm text-[var(--muted)] leading-relaxed mt-4">${v.desc}</p>
+  `;
+  lucide.createIcons();
+}
+
+ventures.forEach((v, i) => {
+  const btn = document.createElement("button");
+  btn.className = "tab-btn glass shrink-0 rounded-full px-4 py-2 text-xs font-semibold border-white/10 whitespace-nowrap";
+  btn.textContent = v.org;
+  btn.setAttribute("data-active", i === 0 ? "true" : "false");
+  btn.addEventListener("click", () => {
+    [...tabsEl.children].forEach((b, j) => b.setAttribute("data-active", j === i ? "true" : "false"));
+    renderPanel(i);
+  });
+  tabsEl.appendChild(btn);
+});
+renderPanel(0);
+
+/* ---------------- PROJECTS GRID ---------------- */
+const projectsGrid = document.getElementById("projects-grid");
+projects.forEach((p) => {
+  const card = document.createElement("div");
+  card.className = "card-hover glass rounded-2xl p-4 border-white/10";
+  card.innerHTML = `
+    <div class="w-9 h-9 rounded-xl flex items-center justify-center mb-3" style="background:linear-gradient(135deg, rgba(212,175,55,0.16), rgba(245,158,11,0.05)); border:1px solid rgba(212,175,55,0.28)">
+      <i data-lucide="${p.icon}" class="w-4 h-4" style="color:var(--gold)"></i>
+    </div>
+    <p class="text-sm font-bold leading-snug">${p.name}</p>
+    <p class="text-[11px] text-[var(--muted)] mt-0.5">${p.sub}</p>
+  `;
+  projectsGrid.appendChild(card);
+});
+lucide.createIcons();
+
+/* ---------------- VCARD DOWNLOAD ---------------- */
+function downloadVCard(){
+  const vcard = [
+    "BEGIN:VCARD",
+    "VERSION:3.0",
+    "N:Sumon;Raihan;Bin;;",
+    "FN:Raihan Bin Sumon",
+    "ORG:Apon Niketon Holdings",
+    "TITLE:Chairman",
+    "TEL;TYPE=CELL,VOICE:+8801719039176",
+    "EMAIL;TYPE=INTERNET,WORK:aponniketonholdings@gmail.com",
+    "ADR;TYPE=WORK:;;Kaji Tower, 37 Station Road;Mymensingh;;;Bangladesh",
+    "URL:https://www.facebook.com/raihan.bin.sumon",
+    "NOTE:Shaping Modern Infrastructure & Visionary Ventures",
+    "END:VCARD"
+  ].join("\r\n");
+
+  const blob = new Blob([vcard], { type: "text/vcard;charset=utf-8" });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "Raihan_Bin_Sumon.vcf";
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+document.getElementById("btn-vcard").addEventListener("click", downloadVCard);
+document.getElementById("btn-vcard-2").addEventListener("click", downloadVCard);
+
+/* ---------------- MEETING MODAL ---------------- */
+const modal = document.getElementById("meeting-modal");
+const panel = document.getElementById("meeting-panel");
+const backdrop = document.getElementById("meeting-backdrop");
+
+function openModal(){
+  modal.classList.remove("hidden");
+  requestAnimationFrame(() => {
+    panel.classList.remove("translate-y-6","opacity-0");
+  });
+  document.body.style.overflow = "hidden";
+}
+function closeModal(){
+  panel.classList.add("translate-y-6","opacity-0");
+  document.body.style.overflow = "";
+  setTimeout(() => modal.classList.add("hidden"), 250);
+}
+
+document.getElementById("open-meeting").addEventListener("click", openModal);
+document.getElementById("close-meeting").addEventListener("click", closeModal);
+backdrop.addEventListener("click", closeModal);
+
+function buildMessage(){
+  const name = document.getElementById("m-name").value.trim();
+  const phone = document.getElementById("m-phone").value.trim();
+  const message = document.getElementById("m-message").value.trim();
+  return { name, phone, message };
+}
+
+document.getElementById("send-whatsapp").addEventListener("click", () => {
+  const { name, phone, message } = buildMessage();
+  if(!name || !phone){
+    document.getElementById("m-name").focus();
+    return;
+  }
+  const text =
+`Meeting Request — Apon Niketon Holdings
+
+Name: ${name}
+Phone: ${phone}
+Purpose: ${message || "Not specified"}`;
+  const url = `https://wa.me/8801719039176?text=${encodeURIComponent(text)}`;
+  window.open(url, "_blank");
+  closeModal();
+});
+
+document.getElementById("send-email").addEventListener("click", () => {
+  const { name, phone, message } = buildMessage();
+  if(!name || !phone){
+    document.getElementById("m-name").focus();
+    return;
+  }
+  const subject = `Meeting Request — ${name}`;
+  const body =
+`Name: ${name}
+Phone: ${phone}
+Purpose: ${message || "Not specified"}`;
+  const url = `mailto:aponniketonholdings@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  window.location.href = url;
+  closeModal();
+});
+
+}); // end DOMContentLoaded
+</script>
+</body>
+</html>
