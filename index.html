@@ -19,22 +19,23 @@
 
 <style>
   :root{
-    --navy-deep:#0B0F19;
-    --navy-slate:#111827;
-    --gold:#D4AF37;
-    --gold-bright:#F59E0B;
-    --ink:#E7E9EE;
-    --muted:#93A0B4;
-    --hair:rgba(212,175,55,0.16);
-    --glass:rgba(255,255,255,0.035);
-    --glass-brd:rgba(255,255,255,0.08);
+    --navy-deep:#0C0C10;
+    --navy-slate:#17171D;
+    --gold:#BFA46E;
+    --gold-bright:#DCC28E;
+    --ink:#F1ECE3;
+    --muted:#9CA0AA;
+    --hair:rgba(191,164,110,0.12);
+    --glass:rgba(255,255,255,0.025);
+    --glass-brd:rgba(255,255,255,0.075);
   }
 
   html{scroll-behavior:smooth;}
   body{
     background:
-      radial-gradient(1200px 600px at 15% -10%, rgba(212,175,55,0.10), transparent 60%),
-      radial-gradient(900px 500px at 100% 0%, rgba(245,158,11,0.06), transparent 55%),
+      radial-gradient(1100px 550px at 15% -10%, rgba(191,164,110,0.045), transparent 60%),
+      radial-gradient(850px 480px at 100% 0%, rgba(220,194,142,0.025), transparent 55%),
+      radial-gradient(1400px 900px at 50% 110%, rgba(0,0,0,0.35), transparent 60%),
       linear-gradient(180deg, var(--navy-deep), var(--navy-slate) 40%, var(--navy-deep));
     background-attachment:fixed;
     color:var(--ink);
@@ -48,7 +49,7 @@
     font-family:'Cormorant Garamond', serif;
     font-weight:600;
     color:transparent;
-    -webkit-text-stroke:1px rgba(212,175,55,0.14);
+    -webkit-text-stroke:1px rgba(191,164,110,0.03);
     letter-spacing:0.02em;
     pointer-events:none;
     user-select:none;
@@ -57,18 +58,18 @@
   .glass{
     background:var(--glass);
     border:1px solid var(--glass-brd);
-    backdrop-filter:blur(14px);
-    -webkit-backdrop-filter:blur(14px);
+    backdrop-filter:blur(9px);
+    -webkit-backdrop-filter:blur(9px);
   }
   .glass-strong{
-    background:linear-gradient(160deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+    background:linear-gradient(160deg, rgba(255,255,255,0.045), rgba(255,255,255,0.015));
     border:1px solid var(--glass-brd);
-    backdrop-filter:blur(18px);
-    -webkit-backdrop-filter:blur(18px);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
   }
 
   .gold-text{
-    background:linear-gradient(100deg, #F3D98A 0%, var(--gold) 45%, var(--gold-bright) 100%);
+    background:linear-gradient(100deg, #E9DCBE 0%, var(--gold) 45%, var(--gold-bright) 100%);
     -webkit-background-clip:text;
     background-clip:text;
     color:transparent;
@@ -76,8 +77,8 @@
   .gold-line{ background:linear-gradient(90deg, transparent, var(--gold) 50%, transparent); height:1px; }
 
   .avatar-ring{
-    background:conic-gradient(from 0deg, #F3D98A, var(--gold-bright), var(--gold), #F3D98A);
-    animation:spin 7s linear infinite;
+    background:conic-gradient(from 0deg, #E9DCBE, var(--gold-bright), var(--gold), #E9DCBE);
+    animation:spin 16s linear infinite;
   }
   @keyframes spin{ to{ transform:rotate(360deg); } }
 
@@ -86,17 +87,17 @@
 
   .card-hover{ transition:transform .35s cubic-bezier(.16,.84,.44,1), border-color .35s ease, box-shadow .35s ease; }
   .card-hover:hover{
-    transform:translateY(-4px);
-    border-color:rgba(212,175,55,0.45);
-    box-shadow:0 20px 45px -20px rgba(212,175,55,0.25), 0 0 0 1px rgba(212,175,55,0.06) inset;
+    transform:translateY(-2px);
+    border-color:rgba(191,164,110,0.28);
+    box-shadow:0 10px 24px -16px rgba(191,164,110,0.12), 0 0 0 1px rgba(191,164,110,0.04) inset;
   }
   .card-hover:active{ transform:translateY(-1px) scale(.995); }
 
   .tab-btn{ transition:all .3s ease; }
   .tab-btn[data-active="true"]{
-    background:linear-gradient(135deg, rgba(212,175,55,0.16), rgba(245,158,11,0.06));
-    border-color:rgba(212,175,55,0.55);
-    color:#F3D98A;
+    background:linear-gradient(135deg, rgba(191,164,110,0.13), rgba(220,194,142,0.045));
+    border-color:rgba(191,164,110,0.35);
+    color:#E9DCBE;
   }
 
   .cta-btn{ transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
@@ -106,9 +107,9 @@
   .shimmer::after{
     content:"";
     position:absolute; inset:0;
-    background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.10) 45%, transparent 60%);
+    background:linear-gradient(115deg, transparent 30%, rgba(255,255,255,0.035) 45%, transparent 60%);
     transform:translateX(-120%);
-    animation:shimmer 4.5s ease-in-out infinite;
+    animation:shimmer 8s ease-in-out infinite;
   }
   @keyframes shimmer{ 0%,100%{ transform:translateX(-120%);} 50%{ transform:translateX(120%);} }
 
@@ -116,17 +117,17 @@
   .modal-panel{ transition:transform .3s cubic-bezier(.16,.84,.44,1), opacity .3s ease; }
 
   ::-webkit-scrollbar{ width:6px; }
-  ::-webkit-scrollbar-thumb{ background:rgba(212,175,55,0.35); border-radius:999px; }
+  ::-webkit-scrollbar-thumb{ background:rgba(191,164,110,0.22); border-radius:999px; }
 
   :focus-visible{ outline:2px solid var(--gold); outline-offset:2px; border-radius:6px; }
 
-  input:focus, textarea:focus{ border-color:rgba(212,175,55,0.6) !important; }
+  input:focus, textarea:focus{ border-color:rgba(191,164,110,0.4) !important; }
 
   @media (prefers-reduced-motion: reduce){
     *{ animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important; }
   }
 
-  .eyebrow{ letter-spacing:0.22em; font-size:0.68rem; }
+  .eyebrow{ letter-spacing:0.24em; font-size:0.68rem; font-weight:600; }
 
   .safe-bottom{ padding-bottom:env(safe-area-inset-bottom); }
 </style>
@@ -139,16 +140,16 @@
   <span class="monogram-wm text-[42vw] leading-none select-none">RBS</span>
 </div>
 
-<div class="max-w-md mx-auto px-5 pt-8 pb-32 relative">
+<div class="max-w-md mx-auto px-5 pt-10 pb-32 relative">
 
   <!-- ============ HERO ============ -->
   <header class="rise" style="animation-delay:.05s">
     <div class="flex flex-col items-center text-center">
       <div class="relative w-28 h-28">
-        <div class="absolute inset-0 rounded-full avatar-ring p-[2.5px]">
+        <div class="absolute inset-0 rounded-full avatar-ring p-[1.5px]">
           <div class="w-full h-full rounded-full bg-[var(--navy-deep)]"></div>
         </div>
-        <div class="absolute inset-[4px] rounded-full overflow-hidden border border-white/10 shadow-[0_0_30px_-4px_rgba(212,175,55,0.55)]">
+        <div class="absolute inset-[4px] rounded-full overflow-hidden border border-white/10 shadow-[0_0_18px_-4px_rgba(191,164,110,0.2)]">
           <!--
             Embedded as Base64 so the portrait always renders with zero extra
             requests. To swap in an external file instead (e.g. after
@@ -161,14 +162,13 @@
             class="w-full h-full object-cover object-center rounded-full"
           />
         </div>
-        <div class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full glass-strong flex items-center justify-center border-[var(--gold)]/40">
+        <div class="absolute -bottom-1 -right-1 w-8 h-8 rounded-full glass-strong flex items-center justify-center border-[var(--gold)]/30">
           <i data-lucide="badge-check" class="w-4 h-4" style="color:var(--gold)"></i>
         </div>
       </div>
 
-      <p class="eyebrow uppercase text-[var(--gold)]/80 mt-5 font-semibold">Executive Profile</p>
-      <h1 class="font-display text-4xl mt-1 tracking-wide gold-text font-semibold">Raihan Bin Sumon</h1>
-      <p class="font-display text-4xl mt-2 tracking-wide gold-text font-bold leading-tight">Chairman</p>
+      <h1 class="font-display text-4xl mt-6 tracking-wide gold-text font-semibold">Raihan Bin Sumon</h1>
+      <p class="font-display text-4xl mt-2 tracking-wide gold-text font-semibold leading-tight">Chairman</p>
       <p class="font-display text-xl mt-1.5 text-[var(--ink)]/85 font-medium tracking-wide">Apon Niketon Holdings</p>
 
       <div class="gold-line w-24 my-4"></div>
@@ -180,19 +180,19 @@
 
     <!-- Quick action grid -->
     <div class="grid grid-cols-4 gap-2.5 mt-7">
-      <button id="btn-vcard" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/50">
+      <button id="btn-vcard" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/35">
         <i data-lucide="user-round-plus" class="w-5 h-5" style="color:var(--gold)"></i>
         <span class="text-[10px] font-semibold text-[var(--ink)]/85">Save</span>
       </button>
-      <a href="https://wa.me/8801719039176" target="_blank" rel="noopener" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/50">
+      <a href="https://wa.me/8801719039176" target="_blank" rel="noopener" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/35">
         <i data-lucide="message-circle" class="w-5 h-5" style="color:var(--gold)"></i>
         <span class="text-[10px] font-semibold text-[var(--ink)]/85">WhatsApp</span>
       </a>
-      <a href="tel:01719039176" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/50">
+      <a href="tel:01719039176" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/35">
         <i data-lucide="phone" class="w-5 h-5" style="color:var(--gold)"></i>
         <span class="text-[10px] font-semibold text-[var(--ink)]/85">Call</span>
       </a>
-      <a href="mailto:aponniketonholdings@gmail.com" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/50">
+      <a href="mailto:aponniketonholdings@gmail.com" class="cta-btn glass rounded-2xl py-3 flex flex-col items-center gap-1.5 border-white/10 hover:border-[var(--gold)]/35">
         <i data-lucide="mail" class="w-5 h-5" style="color:var(--gold)"></i>
         <span class="text-[10px] font-semibold text-[var(--ink)]/85">Email</span>
       </a>
@@ -200,7 +200,7 @@
   </header>
 
   <!-- ============ VENTURE MATRIX ============ -->
-  <section class="mt-11 rise" style="animation-delay:.12s">
+  <section class="mt-14 rise" style="animation-delay:.12s">
     <div class="flex items-baseline justify-between mb-4">
       <h2 class="font-display text-2xl font-semibold text-[var(--ink)]">Leadership &amp; Ventures</h2>
       <span class="eyebrow text-[var(--muted)]">04</span>
@@ -210,11 +210,11 @@
       <!-- tab buttons injected by JS -->
     </div>
 
-    <div id="venture-panel" class="glass-strong rounded-3xl p-5 min-h-[168px]"></div>
+    <div id="venture-panel" class="glass-strong rounded-3xl p-6 min-h-[168px]"></div>
   </section>
 
   <!-- ============ PROJECTS ============ -->
-  <section class="mt-11 rise" style="animation-delay:.18s">
+  <section class="mt-14 rise" style="animation-delay:.18s">
     <div class="flex items-baseline justify-between mb-4">
       <h2 class="font-display text-2xl font-semibold text-[var(--ink)]">Flagship Projects</h2>
       <span class="eyebrow text-[var(--muted)]">09</span>
@@ -223,24 +223,24 @@
   </section>
 
   <!-- ============ MEETING CTA ============ -->
-  <section class="mt-11 rise" style="animation-delay:.24s">
-    <button id="open-meeting" class="shimmer w-full glass-strong rounded-3xl p-5 flex items-center justify-between card-hover text-left" style="border-color:rgba(212,175,55,0.35)">
+  <section class="mt-14 rise" style="animation-delay:.24s">
+    <button id="open-meeting" class="shimmer w-full glass-strong rounded-3xl p-6 flex items-center justify-between card-hover text-left" style="border-color:rgba(191,164,110,0.18)">
       <div>
         <p class="eyebrow uppercase text-[var(--gold)]/80 font-semibold mb-1">Private Consultation</p>
         <p class="font-display text-xl font-semibold">Request a Meeting</p>
         <p class="text-xs text-[var(--muted)] mt-1">Direct inquiry, routed to WhatsApp or email</p>
       </div>
-      <div class="w-11 h-11 rounded-full flex items-center justify-center shrink-0 ml-3" style="background:linear-gradient(135deg,#F3D98A,#D4AF37)">
-        <i data-lucide="arrow-up-right" class="w-5 h-5 text-[#0B0F19]"></i>
+      <div class="w-11 h-11 rounded-full flex items-center justify-center shrink-0 ml-3" style="background:linear-gradient(135deg,#E9DCBE,#BFA46E)">
+        <i data-lucide="arrow-up-right" class="w-5 h-5 text-[#0A0C12]"></i>
       </div>
     </button>
   </section>
 
   <!-- ============ OFFICE LOCATION ============ -->
-  <section class="mt-6 rise" style="animation-delay:.28s">
-    <div class="glass-strong rounded-3xl p-5">
+  <section class="mt-8 rise" style="animation-delay:.28s">
+    <div class="glass-strong rounded-3xl p-6">
       <div class="flex items-start gap-3.5">
-        <div class="w-11 h-11 rounded-2xl glass flex items-center justify-center shrink-0" style="border-color:rgba(212,175,55,0.3)">
+        <div class="w-11 h-11 rounded-2xl glass flex items-center justify-center shrink-0" style="border-color:rgba(191,164,110,0.16)">
           <i data-lucide="map-pin" class="w-5 h-5" style="color:var(--gold)"></i>
         </div>
         <div class="flex-1">
@@ -250,7 +250,7 @@
       </div>
       <a href="https://maps.app.goo.gl/gRmkUeRF8nowiUBx8" target="_blank" rel="noopener"
          class="cta-btn mt-4 w-full flex items-center justify-center gap-2 rounded-xl py-3 text-sm font-semibold"
-         style="background:linear-gradient(135deg,#F3D98A,#D4AF37); color:#0B0F19;">
+         style="background:linear-gradient(135deg,#E9DCBE,#BFA46E); color:#0A0C12;">
         <i data-lucide="navigation" class="w-4 h-4"></i>
         Get Directions
       </a>
@@ -258,14 +258,14 @@
   </section>
 
   <!-- ============ SOCIAL ============ -->
-  <section class="mt-6 rise" style="animation-delay:.32s">
+  <section class="mt-8 rise" style="animation-delay:.32s">
     <p class="eyebrow uppercase text-[var(--muted)] font-semibold mb-3 text-center">Official Channels</p>
     <div class="grid grid-cols-2 gap-3">
-      <a href="https://www.facebook.com/raihan.bin.sumon" target="_blank" rel="noopener" class="cta-btn glass rounded-2xl py-3.5 flex items-center justify-center gap-2 border-white/10 hover:border-[var(--gold)]/50">
+      <a href="https://www.facebook.com/raihan.bin.sumon" target="_blank" rel="noopener" class="cta-btn glass rounded-2xl py-3.5 flex items-center justify-center gap-2 border-white/10 hover:border-[var(--gold)]/35">
         <i data-lucide="facebook" class="w-4 h-4" style="color:var(--gold)"></i>
         <span class="text-xs font-semibold">Personal</span>
       </a>
-      <a href="https://www.facebook.com/profile.php?id=61592000484182" target="_blank" rel="noopener" class="cta-btn glass rounded-2xl py-3.5 flex items-center justify-center gap-2 border-white/10 hover:border-[var(--gold)]/50">
+      <a href="https://www.facebook.com/profile.php?id=61592000484182" target="_blank" rel="noopener" class="cta-btn glass rounded-2xl py-3.5 flex items-center justify-center gap-2 border-white/10 hover:border-[var(--gold)]/35">
         <i data-lucide="facebook" class="w-4 h-4" style="color:var(--gold)"></i>
         <span class="text-xs font-semibold">Company Page</span>
       </a>
@@ -273,7 +273,7 @@
   </section>
 
   <!-- ============ FOOTER ============ -->
-  <footer class="mt-14 text-center rise" style="animation-delay:.36s">
+  <footer class="mt-16 text-center rise" style="animation-delay:.36s">
     <div class="gold-line w-16 mx-auto mb-4"></div>
     <p class="font-display text-lg gold-text font-semibold">Apon Niketon Holdings</p>
     <p class="text-[11px] text-[var(--muted)] mt-1 tracking-wide">Shaping Modern Infrastructure &amp; Visionary Ventures</p>
@@ -284,7 +284,7 @@
 <div class="fixed bottom-0 inset-x-0 z-30 safe-bottom">
   <div class="max-w-md mx-auto px-5 pb-4">
     <div class="glass-strong rounded-2xl p-2 flex items-center gap-2 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.6)]">
-      <button id="btn-vcard-2" class="cta-btn flex-1 flex items-center justify-center gap-1.5 rounded-xl py-2.5 text-xs font-bold" style="background:linear-gradient(135deg,#F3D98A,#D4AF37); color:#0B0F19;">
+      <button id="btn-vcard-2" class="cta-btn flex-1 flex items-center justify-center gap-1.5 rounded-xl py-2.5 text-xs font-bold" style="background:linear-gradient(135deg,#E9DCBE,#BFA46E); color:#0A0C12;">
         <i data-lucide="download" class="w-3.5 h-3.5"></i> Save Contact
       </button>
       <a href="https://wa.me/8801719039176" target="_blank" rel="noopener" class="cta-btn w-11 h-11 shrink-0 rounded-xl flex items-center justify-center glass border-white/10">
@@ -301,7 +301,7 @@
 <div id="meeting-modal" class="fixed inset-0 z-50 hidden">
   <div id="meeting-backdrop" class="absolute inset-0 bg-black/60 modal-backdrop"></div>
   <div class="absolute inset-x-0 bottom-0 sm:inset-0 sm:flex sm:items-center sm:justify-center px-4 pb-4 sm:pb-4">
-    <div id="meeting-panel" class="modal-panel glass-strong w-full max-w-md mx-auto rounded-3xl p-6 translate-y-6 opacity-0" style="border-color:rgba(212,175,55,0.3)">
+    <div id="meeting-panel" class="modal-panel glass-strong w-full max-w-md mx-auto rounded-3xl p-6 translate-y-6 opacity-0" style="border-color:rgba(191,164,110,0.16)">
       <div class="flex items-center justify-between mb-1">
         <p class="font-display text-2xl font-semibold gold-text">Request a Meeting</p>
         <button id="close-meeting" class="w-8 h-8 rounded-full glass flex items-center justify-center border-white/10">
@@ -328,7 +328,7 @@
         </div>
 
         <div class="grid grid-cols-2 gap-2.5 pt-1">
-          <button type="button" id="send-whatsapp" class="cta-btn flex items-center justify-center gap-1.5 rounded-xl py-3 text-xs font-bold" style="background:linear-gradient(135deg,#F3D98A,#D4AF37); color:#0B0F19;">
+          <button type="button" id="send-whatsapp" class="cta-btn flex items-center justify-center gap-1.5 rounded-xl py-3 text-xs font-bold" style="background:linear-gradient(135deg,#E9DCBE,#BFA46E); color:#0A0C12;">
             <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp
           </button>
           <button type="button" id="send-email" class="cta-btn flex items-center justify-center gap-1.5 rounded-xl py-3 text-xs font-bold glass border-white/15">
@@ -392,7 +392,7 @@ function renderPanel(i){
   const v = ventures[i];
   panelEl.innerHTML = `
     <div class="flex items-start gap-4">
-      <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg, rgba(212,175,55,0.18), rgba(245,158,11,0.06)); border:1px solid rgba(212,175,55,0.3)">
+      <div class="w-12 h-12 rounded-2xl flex items-center justify-center shrink-0" style="background:linear-gradient(135deg, rgba(198,166,100,0.14), rgba(228,201,137,0.05)); border:1px solid rgba(198,166,100,0.22)">
         <i data-lucide="${v.icon}" class="w-5.5 h-5.5" style="color:var(--gold)"></i>
       </div>
       <div>
@@ -428,12 +428,12 @@ projects.forEach((p) => {
   }
   card.className = "card-hover glass rounded-2xl p-4 border-white/10 block relative";
   card.innerHTML = `
-    <div class="w-9 h-9 rounded-xl flex items-center justify-center mb-3" style="background:linear-gradient(135deg, rgba(212,175,55,0.16), rgba(245,158,11,0.05)); border:1px solid rgba(212,175,55,0.28)">
+    <div class="w-9 h-9 rounded-xl flex items-center justify-center mb-3" style="background:linear-gradient(135deg, rgba(198,166,100,0.13), rgba(228,201,137,0.045)); border:1px solid rgba(191,164,110,0.15)">
       <i data-lucide="${p.icon}" class="w-4 h-4" style="color:var(--gold)"></i>
     </div>
     <p class="text-sm font-bold leading-snug">${p.name}</p>
     <p class="text-[11px] text-[var(--muted)] mt-0.5">${p.sub}</p>
-    ${p.link ? `<span class="absolute top-3 right-3 w-6 h-6 rounded-full flex items-center justify-center" style="background:rgba(212,175,55,0.14); border:1px solid rgba(212,175,55,0.3)"><i data-lucide="arrow-up-right" class="w-3 h-3" style="color:var(--gold)"></i></span>
+    ${p.link ? `<span class="absolute top-3 right-3 w-6 h-6 rounded-full flex items-center justify-center" style="background:rgba(191,164,110,0.09); border:1px solid rgba(191,164,110,0.16)"><i data-lucide="arrow-up-right" class="w-3 h-3" style="color:var(--gold)"></i></span>
     <span class="text-[9px] uppercase tracking-wider font-bold mt-2 inline-block" style="color:var(--gold)">View Details</span>` : ""}
   `;
   projectsGrid.appendChild(card);
